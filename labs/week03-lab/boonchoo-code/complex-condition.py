@@ -10,7 +10,7 @@ elif username == "admin" and password == "12345" and not is_active:
 else:
     print("Invalid credentials")
 
-# Using 'or' operator
+# Using 'or' operator #สภาวะอากาศ #อุณหภุมิ
 day = "Saturday"
 if day == "Saturday" or day == "Sunday":
     print("It's weekend!")

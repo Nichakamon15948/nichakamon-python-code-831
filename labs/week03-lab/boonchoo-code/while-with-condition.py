@@ -13,8 +13,8 @@ while True:
 
 # Example 2: Menu system
 while True:
-    print("\n=== Main Menu ===")
-    print("1. Calculate Circle Area")
+    print("\n=== Main Menu ===")#อยากหาพื้นที่วงกลม
+    print("1. Calculate Circle Area")#อยากหาพื้นที่สี่่เหลี่ยม
     print("2. Calculate Rectangle Area")
     print("3. Calculate Triangle Area")
     print("4. Exit")
@@ -22,9 +22,9 @@ while True:
     choice = input("Enter your choice (1-4): ")
     
     if choice == "1":
-        radius = float(input("Enter radius: "))
+        radius = float(input("Enter radius: ")) #radiusแปลว่ารัศมี
         if radius > 0:
-            area = 3.14159 * radius * radius
+            area = 3.14159 * radius * radius #คำนวณพื้นที่วงกลม
             print(f"Circle area: {area:.2f}")
         else:
             print("Radius must be positive!")

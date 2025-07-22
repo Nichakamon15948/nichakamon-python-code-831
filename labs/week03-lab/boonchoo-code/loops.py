@@ -22,15 +22,15 @@ for i in range(1, 4):  # rows
     
     
     
-# Break example: Find first number divisible by 7
+# Break example: Find first number divisible by 7 #หาตัวเลขแรกในโปรแกรม
 for num in range(1, 100):
-    if num % 7 == 0:
+    if num % 7 == 0:  #หาร7ลงตัว
         print(f"First number divisible by 7: {num}")
-        break
+        break #เจอbeakออกจากloop 
 
 # Continue example: Skip negative numbers
 numbers = [5, -3, 8, -1, 12, -7, 4]
 for num in numbers:
     if num < 0:
-        continue  # skip negative numbers
+        continue  # skip negative numbers 
     print(f"Positive number: {num}")

@@ -50,5 +50,5 @@ print(fruits)  # ['pear', 'orange', 'grape', 'kiwi']
 del fruits[0]                    # Delete element at index 0
 print(fruits)  # ['orange', 'grape', 'kiwi']
 
-fruits.clear()                   # Remove all elements
+fruits.clear()  #ล้างสมาชิก                 # Remove all elements
 print(fruits)  # []

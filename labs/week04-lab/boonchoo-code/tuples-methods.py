@@ -7,7 +7,7 @@ print(f"Length: {len(numbers)}")         # 7
 # Count occurrences
 print(f"Count of 2: {numbers.count(2)}") # 3
 
-# Find index
+# Find index #indexคือตัวถามว่าอยู่ในnumbersอะไร
 print(f"Index of 3: {numbers.index(3)}")  # 2
 
 # Check membership
@@ -31,5 +31,5 @@ tuple2 = (4, 5, 6)
 combined = tuple1 + tuple2
 print(f"Combined: {combined}")           # (1, 2, 3, 4, 5, 6)
 
-repeated = tuple1 * 3
+repeated = tuple1 * 3 #เอามาต่อกัน3รอบ
 print(f"Repeated: {repeated}")           # (1, 2, 3, 1, 2, 3, 1, 2, 3)

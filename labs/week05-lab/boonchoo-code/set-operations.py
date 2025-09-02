@@ -1,12 +1,12 @@
 # Basic set operations
-fruits = {"apple", "banana", "orange", "grape"}
-citrus = {"orange", "lemon", "lime", "grapefruit"}
+fruits = {"apple", "banana", "orange", "grape"} #ใส่ค่าซ้ำไม่ได้
+citrus = {"orange", "lemon", "lime", "grapefruit"} 
 
 print(f"Fruits: {fruits}")
 print(f"Citrus: {citrus}")
 
 # Adding elements
-fruits.add("strawberry")
+fruits.add("strawberry") #เพิ่มสตอร์เบอร์รี่
 print(f"After adding strawberry: {fruits}")
 
 # Adding multiple elements
@@ -17,12 +17,12 @@ print(f"After adding multiple: {fruits}")
 fruits.remove("banana")  # Raises error if not found
 print(f"After removing banana: {fruits}")
 
-fruits.discard("pineapple")  # No error if not found
+fruits.discard("pineapple")  # No error if not found #ไม่มี pineapple
 print(f"After discarding pineapple: {fruits}")
 
 removed_fruit = fruits.pop()  # Remove arbitrary element
 print(f"Removed: {removed_fruit}")
-print(f"Remaining fruits: {fruits}")
+print(f"Remaining fruits: {fruits}") #ลบเอาไปrandome
 
 # Set mathematical operations
 set_a = {1, 2, 3, 4, 5}
@@ -31,18 +31,18 @@ set_b = {4, 5, 6, 7, 8}
 print(f"Set A: {set_a}")
 print(f"Set B: {set_b}")
 
-# Union (all elements from both sets)
+# Union (all elements from both sets) #เซ็ตaรวมกับB(ไม่ซ้ำ)
 union = set_a | set_b  # or set_a.union(set_b)
 print(f"Union (A | B): {union}")
 
 # Intersection (common elements)
-intersection = set_a & set_b  # or set_a.intersection(set_b)
+intersection = set_a & set_b  # or set_a.intersection(set_b) #ซ้ำกันบ้างมั้ย
 print(f"Intersection (A & B): {intersection}")
 
-# Difference (elements in A but not in B)
+# Difference (elements in A but not in B) #a-b มีในbแต่ไม่มีในA
 difference = set_a - set_b  # or set_a.difference(set_b)
 print(f"Difference (A - B): {difference}")
 
 # Symmetric difference (elements in either A or B, but not both)
 sym_diff = set_a ^ set_b  # or set_a.symmetric_difference(set_b)
-print(f"Symmetric difference (A ^ B): {sym_diff}")
+print(f"Symmetric difference (A ^ B): {sym_diff}") #เอาผลลัลพธ์มาลบกันทั้งสองเซ็ต

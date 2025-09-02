@@ -1,7 +1,7 @@
 
-def contact_book():
+def contact_book(): #ทำไมต้องเอาdef ขึ้นก่อนmain
     """
-    Contact management system using dictionaries
+    Contact management system using dictionaries #รายชื่อผู้ติดต่อ
     Each contact: {"name": str, "phone": str, "email": str, "category": str}
     """
     
@@ -10,7 +10,7 @@ def contact_book():
     contacts = {
         "John Doe": {"phone": "123-456-7890", "email": "john@example.com", "category": "friend"},
         "Jane Smith": {"phone": "987-654-3210", "email": "jane@example.com", "category": "work"},
-    }
+    } 
     
     def add_contact():
         """Add a new contact to the address book"""
@@ -160,4 +160,4 @@ def contact_book():
 if __name__ == "__main__":
     print("Starting Contact Book Manager...")
     
-    contact_book()
+    contact_book() 

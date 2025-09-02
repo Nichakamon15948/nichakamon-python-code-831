@@ -3,20 +3,19 @@
 # =============================================================================
 
 # =============================================================================
-# PART 1: BASIC FUNCTIONS
+# PART 1: BASIC FUNCTIONS #พฤติกรรมการขาย
 # =============================================================================
 print("=== PART 1: BASIC FUNCTIONS ===")
 
 # Example 1: Simple function without parameters
-def say_hello():
+def say_hello():#ชื่อไรก็ได้2ฟังก์ชั่นที่ไม่มีการรับค่า
     """A simple function that prints a greeting"""
     print("Hello, World!")
     print("Welcome to Python functions!")
 
 # Calling the function
 print("Calling say_hello():")
-say_hello()
-print()
+say_hello()#เรียกใข้ฟังกชัน
 
 # Example 2: Function that performs a task
 def draw_separator():
@@ -34,8 +33,8 @@ print()
 print("\n=== PART 2: FUNCTIONS WITH PARAMETERS ===")
 
 # Example 1: Function with one parameter
-def greet_person(name):
-    """Greets a person by name"""
+def greet_person(name): #รับข้อมูล1ตัวและทำงาน
+    """Greets a person by name""" #ต้องส่งข้อมูลอย่างน้อย1ตัว
     print(f"Hello, {name}! Nice to meet you.")
 
 print("Calling greet_person with different names:")
@@ -45,7 +44,7 @@ greet_person("Charlie")
 print()
 
 # Example 2: Function with multiple parameters
-def introduce_person(name, age, city):
+def introduce_person(name, age, city): #รับข้อมูล3ตัวส่งมากกวา3หรือน้อยกว่า3ไม่ได้ 
     """Introduces a person with their details"""
     print(f"Hi! My name is {name}.")
     print(f"I am {age} years old.")
@@ -56,7 +55,7 @@ print("Calling introduce_person:")
 introduce_person("Diana", 25, "New York")
 introduce_person("Eve", 30, "Los Angeles")
 
-# Example 3: Mathematical function
+# Example 3: Mathematical function #มากกว่า1ตัว
 def calculate_rectangle_area(length, width):
     """Calculates and displays rectangle area"""
     area = length * width
@@ -73,27 +72,27 @@ calculate_rectangle_area(10, 7)
 # =============================================================================
 print("\n=== PART 3: FUNCTIONS WITH RETURN VALUES ===")
 
-# Example 1: Function that returns a value
-def add_numbers(a, b):
+# Example 1: Function that returns a value  #เรียกค่ากลับไปหาผู้ใช้
+def add_numbers(a, b): #น้อยกว่า2หรือมากกว่า2ไม่ได้
     """Adds two numbers and returns the result"""
     result = a + b
-    return result
+    return result #มีการส่งค่ากลับ
 
 print("Using functions that return values:")
-sum1 = add_numbers(5, 3)
-sum2 = add_numbers(10, 7)
+sum1 = add_numbers(5, 3) #8
+sum2 = add_numbers(10, 7) #17
 print(f"5 + 3 = {sum1}")
 print(f"10 + 7 = {sum2}")
-print(f"Sum of both results: {sum1 + sum2}")
+print(f"Sum of both results: {sum1 + sum2}") #25
 print()
 
 # Example 2: Function returning multiple values
-def get_circle_info(radius):
+def get_circle_info(radius): #ส่งค่า1ค่า
     """Calculates circle area and circumference"""
     pi = 3.14159
     area = pi * radius * radius
-    circumference = 2 * pi * radius
-    return area, circumference
+    circumference = 2 * pi * radius #พายกำลังสอง
+    return area, circumference #โยนค่ากลับ2ข้าง
 
 print("Circle calculations:")
 radius = 5
@@ -104,7 +103,7 @@ print(f"Circumference: {circumference:.2f}")
 print()
 
 # Example 3: Using returned values in expressions
-def multiply(x, y):
+def multiply(x, y): #ต้องส่ง2ตัวเสมอ 
     """Multiplies two numbers"""
     return x * y
 
@@ -122,8 +121,8 @@ print()
 # =============================================================================
 print("\n=== PART 4: DEFAULT PARAMETERS ===")
 
-# Example 1: Function with default parameter
-def greet_with_title(name, title="Mr./Ms."):
+# Example 1: Function with default parameter #คนใช้จะส่งหรือไม่ส่งก็ได้เพราะDEFAULTอยู่
+def greet_with_title(name, title="Mr./Ms."): 
     """Greets person with optional title"""
     print(f"Hello, {title} {name}!")
 
@@ -236,7 +235,7 @@ for pwd in passwords:
     print(f"{status} '{pwd}': {message}")
 print()
 
-# Example 3: Temperature converter
+# Example 3: Temperature converter #เปลี่ยนหน่วยอุณหภูมิ
 def celsius_to_fahrenheit(celsius):
     """Converts Celsius to Fahrenheit"""
     fahrenheit = (celsius * 9/5) + 32
@@ -299,12 +298,12 @@ print()
 print("\n=== PART 7: ADVANCED EXAMPLES ===")
 
 # Example 1: Text analyzer
-def analyze_text(text):
+def analyze_text(text): #ยายามในการรตรวจสอบ
     """Analyzes text and returns statistics"""
-    words = len(text.split())
-    chars_with_spaces = len(text)
+    words = len(text.split()) #นับคำ
+    chars_with_spaces = len(text) #นับอัขระ
     chars_without_spaces = len(text.replace(" ", ""))
-    sentences = text.count('.') + text.count('!') + text.count('?')
+    sentences = text.count('.') + text.count('!') + text.count('?') #นับจุด
     
     return {
         'words': words,
@@ -321,7 +320,7 @@ for key, value in stats.items():
     print(f"{key.replace('_', ' ').title()}: {value}")
 print()
 
-# Example 2: List statistics
+# Example 2: List statistics #หาค่าในlist
 def calculate_stats(numbers):
     """Calculates statistics for a list of numbers"""
     if not numbers:
@@ -350,6 +349,7 @@ for key, value in stats.items():
 print()
 
 # Example 3: Fibonacci sequence
+0 1 1 2 3 5 8 13 21
 def fibonacci(n):
     """Returns the nth Fibonacci number"""
     if n <= 0:

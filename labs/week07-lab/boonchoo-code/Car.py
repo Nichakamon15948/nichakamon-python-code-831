@@ -1,9 +1,9 @@
 class Car:
     # Class attribute (shared by all instances)
-    wheels = 4
+    wheels = 4  #ตัวแปล2ตัว
     vehicle_type = "Car"
     
-    def __init__(self, brand, model, year):
+    def __init__(self, brand, model, year): 
         # Instance attributes (unique to each instance)
         self.brand = brand
         self.model = model
@@ -15,7 +15,7 @@ class Car:
         self.mileage += distance
         return f"Drove {distance} km. Total mileage: {self.mileage} km"
     
-    def get_info(self):
+    def get_info(self): #รีเทิร์นข้อความ  selif brand model year
         """Method to get car information"""
         return f"{self.year} {self.brand} {self.model} - Mileage: {self.mileage} km"
     

@@ -1,4 +1,4 @@
-student = {
+student = {     #เข้าถึงเพื่ออ่าน,เพื่อแก้ไขข้อมูล
     "name": "Alice Smith",
     "age": 20,
     "major": "Computer Science",
@@ -7,13 +7,13 @@ student = {
 }
 
 # Accessing values by key
-print(f"Name: {student['name']}")           # Alice Smith
+print(f"Name: {student['name']}")           # Alice Smith  nameพยายามเข้าถึงสมาชิกของname 
 print(f"Age: {student['age']}")             # 20
 
 # Using get() method (safer)
 print(f"Major: {student.get('major')}")     # Computer Science
 print(f"Phone: {student.get('phone')}")     # None (key doesn't exist)
-print(f"Phone: {student.get('phone', 'Not provided')}")  # Default value
+print(f"Phone: {student.get('phone', 'Not provided')}")  # Default  #ปลอดภัยกว่า
 
 # Accessing nested data
 print(f"First course: {student['courses'][0]}")  # Python
@@ -23,7 +23,7 @@ if 'gpa' in student:
     print(f"GPA: {student['gpa']}")
 
 # Get all keys, values, and items
-print(f"Keys: {list(student.keys())}")
+print(f"Keys: {list(student.keys())}") #kaysไปหยิบกุญแจทั้งหมดเสร็จแล้วใส่ในฟังค์ชั่นlist
 print(f"Values: {list(student.values())}")
 print(f"Items: {list(student.items())}")
 
@@ -41,37 +41,37 @@ inventory = {
 print(f"Original inventory: {inventory}")
 
 # Adding new items
-inventory["grapes"] = 40
-inventory["strawberries"] = 15
+inventory["grapes"] = 40 #เพิ่มข้อมูลขององุ่น 
+inventory["strawberries"] = 15 #ถ้าไม่มีสตอเบอร์รี่คือการเพิ่มข้อมูลเข้าไป
 print(f"After adding items: {inventory}")
 
 # Updating existing items
 inventory["apples"] = 45  # Reduce apple count
-inventory["bananas"] += 20  # Add more bananas
+inventory["bananas"] += 20  # Add more bananas #เพิ่มจากกล้วยเก่าบวกกับกล้วยใหม่20
 print(f"After updates: {inventory}")
 
 # Using update() method
 new_items = {"mangoes": 35, "pineapples": 10}
-inventory.update(new_items)
-print(f"After bulk update: {inventory}")
+inventory.update(new_items)#แก้ข้อมูลหรือเพิ่มถ้าไม่มีเหมือนไอตัวด้านบนแปลว่าแก้ข้อมูลไม่ก็อัพเดต
+print(f"After bulk update: {inventory}") 
 
 # Update with another syntax
 inventory.update(apples=60, bananas=55)
 print(f"After keyword update: {inventory}")
 
 # Removing items
-removed_item = inventory.pop("strawberries")  # Remove and return value
+removed_item = inventory.pop("strawberries")  # Remove and return value  
 print(f"Removed {removed_item} strawberries")
 
-del inventory["pineapples"]  # Remove without returning
+del inventory["pineapples"]  # Remove without returning ดีดpineapplesออกมา
 print(f"After deletions: {inventory}")
 
-# Remove last item (Python 3.7+)
-last_item = inventory.popitem()
+# Remove last item (Python 3.7+) 
+last_item = inventory.popitem() #ตัวท้าย
 print(f"Last item removed: {last_item}")
 
 # Clear all items
-backup = inventory.copy()
+backup = inventory.copy() #ทำสำเนาทั้งก้อนของดัชนีนี้ 
 inventory.clear()
 print(f"After clear: {inventory}")
 print(f"Backup: {backup}")

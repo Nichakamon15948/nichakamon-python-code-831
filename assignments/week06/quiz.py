@@ -7,7 +7,7 @@ return ข้อความต้อนรับในรูปแบบ string
 """
 def welcome_message(name, course):
     # Your Problem 1 solution
-    pass
+    return  f"Welcome {name} to {course} class!"
 
 """ เขียน function ชื่อ calculate_circle ที่มีคุณสมบัติดังนี้:
 
@@ -18,11 +18,17 @@ return dictionary ที่มี area และ circumference
 
 def calculate_circle(radius):
     # Your Problem 2 solution
-    pass
+    pi = 3.14159
+    area = pi * radius * radius
+    circumference = 2 * pi * radius 
+    return {
+        "area":area,
+        "circumference": circumference
+    }
 
 """ เขียน function ชื่อ create_user_profile ที่มีคุณสมบัติดังนี้:
 
-รับ parameters: username (จำเป็น), age (ค่าเริ่มต้น 18), premium (ค่าเริ่มต้น False)
+รับ parameters: username (จำเป็น), age (ค่าเริ่มต้น 18), premium (ค่าเริ่มต้น False) #รับ3ตัว
 return string ที่จัดรูปแบบข้อมูลผู้ใช้
 รูปแบบ: "[username] (age: [age]) - [Premium User / Standard User]"
 
@@ -30,7 +36,10 @@ return string ที่จัดรูปแบบข้อมูลผู้ใ
 
 def create_user_profile(username, age=18, premium=False):
     # Your Problem 3 solution
-    pass
+    if premium == True:
+        return f"{username} (age: {age}) - Premium User"
+    else:
+        return f"{username} (age: {age}) -  Standard User"
 
 """ เขียน function ชื่อ analyze_scores ที่มีคุณสมบัติดังนี้:
 
@@ -43,9 +52,26 @@ highest: คะแนนสูงสุด
 lowest: คะแนนต่ำสุด
 passed: จำนวนคะแนนที่ >= 70 """
 
-def analyze_scores(scores):
+def analyze_scores(numbers):
     # Your Problem 4 solution
-    pass
+    total = sum(numbers)
+    count = len(numbers)
+    average = total / count
+    lowest = min(numbers)
+    highest = max(numbers)
+    counter = 0
+    for number in numbers:
+        if number >= 70:
+            counter += 1
+    
+    return {
+        'sum': total,
+        'count': count,
+        'average': round(average, 2),
+        'lowest': lowest,
+        'highest': highest,
+        'passed': counter
+    }
 
 """ เขียน function ชื่อ count_vowels_consonants ที่มีคุณสมบัติดังนี้:
 
@@ -56,7 +82,25 @@ return dictionary ที่มี vowels และ consonants counts
 
 def count_vowels_consonants(text):
     # Your Problem 5 solution
-    pass
+    text = text.lower() #i'm iron man
+    text = text.replace(" ","")#i'mironman
+    text = text.replace("0","")
+    text = text.replace("1","")
+    text = text.replace("2","")
+    text = text.replace("3","")
+    text = text.replace("4","")
+    text = text.replace("5","")
+    text = text.replace("6","")
+    text = text.replace("7","")
+    text = text.replace("8","") 
+    text = text.replace("9","") 
+    vowels = text.count('a') + text.count('e') + text.count('i') + text.count('o') + text.count('u')
+    consonants = len(text) - vowels
+    
+    return {
+        'vowel': vowels,
+        'consonants': consonants
+    }
 
 # =============================================================================
 # TEST SECTION - DO NOT MODIFY
@@ -128,6 +172,7 @@ def run_all_tests():
         print(f"✗ Problem 5: ERROR - {e}")
     
     print("\n" + "="*50)
+
     print("END OF TESTS")
     print("="*50)
 

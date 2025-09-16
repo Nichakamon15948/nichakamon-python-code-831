@@ -1,4 +1,4 @@
-# Parent class (Base class)
+# Parent class (Base class) #ต่อยอดโค้ดชาวบ้านได้ 
 class Animal:
     
     def __init__(self, name, species):

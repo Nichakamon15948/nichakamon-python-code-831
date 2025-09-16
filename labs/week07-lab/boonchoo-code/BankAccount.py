@@ -3,7 +3,7 @@ class BankAccount: #บัญชีธนาคาร
     
     def __init__(self, account_holder, initial_balance=0):
         self.account_holder = account_holder
-        self.balance = initial_balance
+        self.balance = initial_balance #ยอดเงินคงเหลือ
         self.transaction_history = []
     
     def deposit(self, amount):

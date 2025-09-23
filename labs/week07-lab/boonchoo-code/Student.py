@@ -1,11 +1,11 @@
 class Student:
     """A simple Student class"""
     
-    def __init__(self, name, age, student_id):
+    def __init__(self, name, age, student_id): 
         self.name = name           # Instance attribute
         self.age = age            # Instance attribute
         self.student_id = student_id  # Instance attribute
-        self.courses = []         # Instance attribute (list)
+        self.courses = []         # Instance attribute (list) #รายวิชาเแป็น list
     
     def introduce(self):
         """Method to introduce the student"""

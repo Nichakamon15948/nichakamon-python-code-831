@@ -1,4 +1,4 @@
-class Library:
+class Library: #ห้องสมุด 
     """A simple library management system"""
     
     def __init__(self, name):
@@ -6,13 +6,13 @@ class Library:
         self.books = []
         self.members = []
     
-    def add_book(self, title, author):
+    def add_book(self, title, author): #เพิ่มสมุด
         """Add a book to the library"""
         book = {"title": title, "author": author, "available": True}
         self.books.append(book)
         return f"Book '{title}' by {author} added to library"
     
-    def register_member(self, member_name):
+    def register_member(self, member_name):  #สมัครสมาชิก
         """Register a new member"""
         if member_name not in self.members:
             self.members.append(member_name)
@@ -20,7 +20,7 @@ class Library:
         else:
             return f"Member '{member_name}' already registered"
     
-    def borrow_book(self, member_name, book_title):
+    def borrow_book(self, member_name, book_title): #ยืมหนังสือ
         """Allow member to borrow a book"""
         if member_name not in self.members:
             return "Member not registered"
@@ -32,7 +32,7 @@ class Library:
         
         return "Book not available or not found"
     
-    def return_book(self, book_title):
+    def return_book(self, book_title): 
         """Return a book to the library"""
         for book in self.books:
             if book["title"] == book_title and not book["available"]:
@@ -41,7 +41,7 @@ class Library:
         
         return "Book not found or already available"
     
-    def show_available_books(self):
+    def show_available_books(self): #มีหนังสือเล่มไหนที่ยังเหลือให้ยืมได้
         """Display all available books"""
         available = [book for book in self.books if book["available"]]
         if available:

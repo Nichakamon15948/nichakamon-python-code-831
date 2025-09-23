@@ -1,9 +1,9 @@
-class BankAccount:
-    """A simple bank account class"""
+class BankAccount: #บัญชีธนาคาร
+    """A simple bank account class""" 
     
     def __init__(self, account_holder, initial_balance=0):
         self.account_holder = account_holder
-        self.balance = initial_balance
+        self.balance = initial_balance #ยอดเงินคงเหลือ
         self.transaction_history = []
     
     def deposit(self, amount):
@@ -26,7 +26,7 @@ class BankAccount:
         else:
             return "Withdrawal amount must be positive"
     
-    def get_balance(self):
+    def get_balance(self): #ดูยอดเงินคงเหลือได้
         """Method to check balance"""
         return f"Current balance: ${self.balance}"
     
@@ -43,4 +43,4 @@ print(account.get_balance())
 print(account.deposit(500))
 print(account.withdraw(200))
 print("\nTransaction History:")
-print(account.get_transaction_history())
+print(account.get_transaction_history()) #ธุรกรรมของบัญชีนั้นๆ

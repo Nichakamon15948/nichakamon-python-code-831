@@ -10,7 +10,7 @@ class Rectangle: #ความยาวกับความกว้างข�
         self.length = length
         self.width = width
 
-    # Method to get the area
+    # Method to get the areag
     def get_area(self):
         return self.length * self.width
 
